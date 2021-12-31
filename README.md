@@ -29,6 +29,7 @@
 
 <h2>1. 개요
 
+ <br>
  1.1 Smart Hand Presentation
 </h2>
 
@@ -75,7 +76,7 @@ Presentation을 하다가 프로젝터에 연결된 컴퓨터에 가서 조작�
 다음과 같은 요구사항들을 바탕으로 구현에 착수한다.
 
 <h2>2Finger Module
-
+<br>
 2.1 Intel RealSense D435</h2>
 
 
@@ -679,6 +680,10 @@ Nvgesture(30GB)
 ![image](https://user-images.githubusercontent.com/96565110/147815684-ac8a9a07-ed21-4e74-90e3-13b3aa472b97.png)
 ![image](https://user-images.githubusercontent.com/96565110/147815685-d2db3f3e-1369-4876-88d5-dbd2beefd132.png)
 ![image](https://user-images.githubusercontent.com/96565110/147815688-2208e4a7-8b94-4555-9fdb-ed83502eb660.png)
+
+<br>
+https://user-images.githubusercontent.com/96565110/147815904-02ae1bd2-9a42-4f53-88fe-b2248f2f77a0.mp4
+
 
 
 알파벳 A를 쓰는 과정동안 계속해서 1~5번의 키 값이 바뀌는 것을 확인 할 수 가 있다.
