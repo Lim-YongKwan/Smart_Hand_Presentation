@@ -26,9 +26,11 @@
 <br>5.3        Resource
 6. Reference
 
-# 1개요
 
-## 1.1Smart Hand Presentation
+<h2>1. 개요
+
+ 1.1 Smart Hand Presentation
+</h2>
 
 Presentation은 다른 사람에게 자신의 생각을 전달하는 행위라고 할 수 있다.
 
@@ -60,9 +62,11 @@ Presentation을 하다가 프로젝터에 연결된 컴퓨터에 가서 조작�
   1. 손으로 Presentation을 하기 위해선 강인한 손 인식이 필요
   2. 강인한 손 인식을 위해선 Frame에서 손을 추출해내는 기술이 필요
   3. 안정적으로 손 검출을 위해선 깔끔한Frame이 필요 ( Frame Processing )
+  
 2. Gesture Module
   1. Presentation을 조작하기 위해서는 Gesture 인식이 필요
   2. Dynamic Gesture 인식을 위해서는 Deep Learning이 필요
+  
 3. UI Module
   1. 사용자가 글씨를 쓰기 위해서는 PPT를 덮는 투명한 UI가 필요
   2. 손 글씨는 부정확할 수 있으므로 글자 보정이 필요
@@ -70,26 +74,27 @@ Presentation을 하다가 프로젝터에 연결된 컴퓨터에 가서 조작�
 
 다음과 같은 요구사항들을 바탕으로 구현에 착수한다.
 
-# 2Finger Module
+<h2>2Finger Module
 
-## 2.1Intel RealSense D435
+2.1 Intel RealSense D435</h2>
 
--
-### D435
+D435
+![image](https://user-images.githubusercontent.com/96565110/147814981-b55cd574-12b9-4d29-ad43-36c34376813b.png)
+![image](https://user-images.githubusercontent.com/96565110/147814987-795d4539-b643-4cee-8e31-01976ddbe5df.png)
 
-![](RackMultipart20211231-4-1h7naab_html_e9d2b7c5cb354c9d.jpg) ![](RackMultipart20211231-4-1h7naab_html_dbd92f648cd2374.jpg)
 
--
-### Frames
+Frames
 
-![](RackMultipart20211231-4-1h7naab_html_47b8a4560ec30841.jpg)
+![image](https://user-images.githubusercontent.com/96565110/147814997-459c2e17-33c9-4ef7-80df-42e5615cafc5.png)
+
 
 RGB Frame 과 Depth Frame을 동시에 Streaming &amp; Processing 가능
 
 Depth Frame은 각 pixel에 대해 Depth Distance를 획득 할 수 있음
 
--
-### Advantages of Depth Camera
+
+
+Advantages of Depth Camera
 
 해당 프로젝트의 핵심은 바로 이 Depth Camera이다.
 
@@ -103,11 +108,13 @@ RGB Camera의 단점은 다음과 같다.
 
 둘째로는 사람의 피부색에 따라서 일정한 인식을 수행하지 못하는 것이다.
 
-![](RackMultipart20211231-4-1h7naab_html_407421b3206390e9.png) ![](RackMultipart20211231-4-1h7naab_html_dda3958c39f92011.png)
+![image](https://user-images.githubusercontent.com/96565110/147815010-bc206ac2-d13f-47c1-af45-faffa8e8a401.png)
+![image](https://user-images.githubusercontent.com/96565110/147815013-adc3139d-ec80-4063-a981-feb92712922c.png)
+
 
 ( 이를 보여주는 단적인 예시 , 조명이 없어지자 마자 다른 객체를 탐지함을 확인할 수 있다. )
 
-![](RackMultipart20211231-4-1h7naab_html_fc63248af03a8771.jpg)
+![image](https://user-images.githubusercontent.com/96565110/147815016-0ad995e8-808d-4194-b0df-9a0e80d9ab0f.png)
 
 반면 Depth Camera에서 얻을 수 있는 Depth Frame은 오로지 Distance data로만 사물을 판별하기 때문에
 
