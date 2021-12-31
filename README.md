@@ -69,19 +69,19 @@ Presentation을 하다가 프로젝터에 연결된 컴퓨터에 가서 조작�
 <br>• D435
 ![image](https://user-images.githubusercontent.com/96565110/147814104-babe71d7-0d10-4591-b7d9-a594f729ea65.png)
 ![image](https://user-images.githubusercontent.com/96565110/147814106-d7fe8ae2-a998-477f-9e18-98090d42bdd3.png)
-
+<br>
 • Frames
 ![image](https://user-images.githubusercontent.com/96565110/147814111-0b280241-807b-417f-a677-cf363e086d67.png)
 
 <br>RGB Frame 과 Depth Frame을 동시에 Streaming & Processing 가능
-<br>Depth Frame은 각 pixel에 대해 Depth Distance를 획득 할 수 있음
+<br>Depth Frame은 각 pixel에 대해 Depth Distance를 획득 할 수 있음<br>
 <br>• Advantages of Depth Camera
 <br>해당 프로젝트의 핵심은 바로 이 Depth Camera이다.<br>
 기존의  RGB  Camera 에서의  Vision  인식에는 치명적인  단점이 존재하고 ,
 <br>이  단점을 Depth Camera가  해결 해 줄 수 있기 때문이다.
-<br>RGB Camera의 단점은 다음과 같다.<br>
+<br>RGB Camera의 단점은 다음과 같다.<br><br>
 첫째로는 조명에 매우 민감하다는 것 , 
-<br>둘째로는 사람의 피부색에 따라서 일정한 인식을 수행하지 못하는 것이다.
+<br>둘째로는 사람의 피부색에 따라서 일정한 인식을 수행하지 못하는 것이다.<br>
 ![image](https://user-images.githubusercontent.com/96565110/147814113-cff9c9e1-3394-4af3-ae6d-1d3dab329860.png)
 ![image](https://user-images.githubusercontent.com/96565110/147814116-4f7a9ac2-8278-4ef9-9809-8331be153ff1.png)
 
