@@ -55,18 +55,18 @@ Presentation을 하다가 프로젝터에 연결된 컴퓨터에 가서 조작�
 크게 3가지 Module이 필요하다.
 
 1. Finger Module
-  A. 손으로 Presentation을 하기 위해선 강인한 손 인식이 필요
-  B. 강인한 손 인식을 위해선 Frame에서 손을 추출해내는 기술이 필요
-  C. 안정적으로 손 검출을 위해선 깔끔한Frame이 필요 ( Frame Processing )
+<br>  A. 손으로 Presentation을 하기 위해선 강인한 손 인식이 필요
+ <br> B. 강인한 손 인식을 위해선 Frame에서 손을 추출해내는 기술이 필요
+  <br>C. 안정적으로 손 검출을 위해선 깔끔한Frame이 필요 ( Frame Processing )
   
 2. Gesture Module
-  A. Presentation을 조작하기 위해서는 Gesture 인식이 필요
-  B. Dynamic Gesture 인식을 위해서는 Deep Learning이 필요
+ <br> A. Presentation을 조작하기 위해서는 Gesture 인식이 필요
+  <br>B. Dynamic Gesture 인식을 위해서는 Deep Learning이 필요
   
 3. UI Module
-  A. 사용자가 글씨를 쓰기 위해서는 PPT를 덮는 투명한 UI가 필요
-  B. 손 글씨는 부정확할 수 있으므로 글자 보정이 필요
-  C. 손 글씨를 인식하는 Deep Learning이 필요
+ <br> A. 사용자가 글씨를 쓰기 위해서는 PPT를 덮는 투명한 UI가 필요
+ <br> B. 손 글씨는 부정확할 수 있으므로 글자 보정이 필요
+ <br> C. 손 글씨를 인식하는 Deep Learning이 필요
 
 다음과 같은 요구사항들을 바탕으로 구현에 착수한다.
 
