@@ -376,7 +376,8 @@ Mouse Position이 갑자기 멀리 Kidnapping되는 현상 방지
 
 Finger Program 작동절차
 
-![](RackMultipart20211231-4-1h7naab_html_ffd82513cf7d856b.jpg)
+![image](https://user-images.githubusercontent.com/96565110/147815476-1331c090-d4b7-45d9-9a1c-21abec5316c5.png)
+
 
 매 프레임마다 이러한 루틴을 반복
 
@@ -404,11 +405,11 @@ EMNIST 라는 외부의 데이터셋을 사용하였다. ( Reference 참고 )
 
 데이터셋의 Shape 는 124800 x 28 x 28 이며
 
-![](RackMultipart20211231-4-1h7naab_html_9fab496cbbf024f8.png)
+![image](https://user-images.githubusercontent.com/96565110/147815491-e1cd2b93-5c7b-4491-9894-860a8c21d9f7.png)
 
 각 문자는 아래와 같은 형상을 하고있다.
 
-![](RackMultipart20211231-4-1h7naab_html_5853387b0587774b.png)
+![image](https://user-images.githubusercontent.com/96565110/147815493-b48e89a1-e027-414e-b558-00f99639a8ff.png)
 
 -
 ### Handwriting Learning Model
@@ -447,15 +448,15 @@ model.compile(loss=losses.categorical\_crossentropy,optimizer=&quot;Adam&quot;,m
 
 Model 의 Summary 는 다음과 같다
 
-![](RackMultipart20211231-4-1h7naab_html_8c8181486460dcd9.png)
+![image](https://user-images.githubusercontent.com/96565110/147815503-c9d4b6bb-d85e-426d-855d-dd6f4c166b10.png)
 
 각 층의 Parameter을 조금씩 조정하며 테스트 하였으며
 
 학습 과정에서Validation Set 에 대한 최종 Loss 값, Test Set에 대한 Accuracy 는
 
-![](RackMultipart20211231-4-1h7naab_html_e993cfbcfd69ecb1.png)
+![image](https://user-images.githubusercontent.com/96565110/147815512-d776b06a-f477-4931-89ca-4590b5cbf101.png)
 
-![](RackMultipart20211231-4-1h7naab_html_279b74ec6529130.png)
+![image](https://user-images.githubusercontent.com/96565110/147815514-38a67e89-2d15-46f0-b2ac-aa5cc8b076a7.png)
 
 각각 0.15716 , 94.83%를 기록하였다.
 
@@ -464,11 +465,11 @@ Model 의 Summary 는 다음과 같다
 
 테스트를 위한 아래 GUI 의 흰색 부분에 글씨를 쓰면
 
-![](RackMultipart20211231-4-1h7naab_html_8f5af0f5bfc70969.png)
+![image](https://user-images.githubusercontent.com/96565110/147815522-d08f1c17-4a85-4cc7-9b78-04187c1e64ab.png)
 
 위의 이미지를 모델의 Input 에 맞게 처리를 하며, 이를 Model에 집어넣어 Predict를 하면 다음과 같은 값들이 나오게 된다.
 
-![](RackMultipart20211231-4-1h7naab_html_c1b9cef2807ac5cd.png)
+![image](https://user-images.githubusercontent.com/96565110/147815527-e6b02973-23e3-4a38-9f00-aef387e1b28f.png)
 
 총 27 개의 인덱스, 0번째이후 1 ~ 26 까지가 각각 A~Z 이며 값이 가장 큰 것 일수록 해당 글자일 확률이 높다. 오차를 줄이기위해 정확도순 0~4 순위까지 출력하여 사용자가 선택할 수 있도록 하였다.( 4. UI 부분 참조)
 
@@ -481,27 +482,32 @@ Model 의 Summary 는 다음과 같다
 
 Class 는 총 5개이며, 각 Class 의 데이터 하나의 예시는 다음과 같다.
 
-![](RackMultipart20211231-4-1h7naab_html_c81ada3c31abd3d4.png)
+![image](https://user-images.githubusercontent.com/96565110/147815537-1d606013-0bd0-402a-bbeb-fc56a0c1a2e2.png)
 
-1. Left
 
-![](RackMultipart20211231-4-1h7naab_html_f5870c9b9de1ab86.png)
+0. Left
+
+![image](https://user-images.githubusercontent.com/96565110/147815542-c3231036-79d3-4078-b07b-a16177b5e4e2.png)
+
 
 1. Right
 
-![](RackMultipart20211231-4-1h7naab_html_f6a44095bc3a430d.png)
+![image](https://user-images.githubusercontent.com/96565110/147815551-aa7052be-1846-4dd2-ab0e-a63ed8106b31.png)
 
-1. Scroll
+2. Scroll
 
-![](RackMultipart20211231-4-1h7naab_html_1b7c443bf9b1471.png)
+![image](https://user-images.githubusercontent.com/96565110/147815561-860c2081-ab34-42df-a897-be7111dba530.png)
 
-1. Clap
 
-![](RackMultipart20211231-4-1h7naab_html_1885b16ce643a02c.png)
+3. Clap
 
-1. Idle
+![image](https://user-images.githubusercontent.com/96565110/147815570-27955373-bb5d-48cb-876a-d55ec2d7f586.png)
 
-![](RackMultipart20211231-4-1h7naab_html_66f0e9754c8821b3.png)
+
+4. Idle
+
+![image](https://user-images.githubusercontent.com/96565110/147815576-8007b077-1751-4a05-b690-507043f65359.png)
+
 
 시간 사정으로 인해 1개의 클래스는 한 사람의 것으로 이루어져 있으며(Clap)
 
@@ -542,7 +548,7 @@ model.compile(loss=&quot;categorical\_crossentropy&quot;,optimizer=&quot;Adam&qu
 
 Model Summary 는 다음과 같고,
 
-![](RackMultipart20211231-4-1h7naab_html_a7554fb5183f3d9c.png)
+![image](https://user-images.githubusercontent.com/96565110/147815585-2e6870b5-2bce-4efa-bd90-0f89c2ebc559.png)
 
 위의 구조로 모델을 10개 만들었으며 ( 이 이유는 Gesture Predict 란 참조)
 
@@ -570,7 +576,8 @@ Model Summary 는 다음과 같고,
 
 이며 총 학습시간은 88.203 sec 소요
 
-![](RackMultipart20211231-4-1h7naab_html_75d4084fcb9dc1f.png)
+![image](https://user-images.githubusercontent.com/96565110/147815588-2e91f7e8-ae85-4141-9426-e265e0f918d3.png)
+
 
 -
 ### Gesture Predict
@@ -579,15 +586,15 @@ Model Summary 는 다음과 같고,
 
 30프레임 예시 파일
 
-![](RackMultipart20211231-4-1h7naab_html_256492326a7e3543.png)
+![image](https://user-images.githubusercontent.com/96565110/147815593-d2b6110f-c339-4ee5-a999-d078727c43a6.png)
 
 받은 데이터들을 각 모델에 순서대로 집어넣어 아래의 구조로 동작하여 각 프레임이 어느 동작인지 판단하여 클래스 값을 출력하게 된다.
 
-![](RackMultipart20211231-4-1h7naab_html_f6b0042b396987b8.png)
+![image](https://user-images.githubusercontent.com/96565110/147815603-4cd742c1-9611-4e59-bf3d-8eccff875856.png)
 
 30 프레임 예시 파일을 함수에 넣을 시 결과는 다음과 같이 나오게 된다.
 
-![](RackMultipart20211231-4-1h7naab_html_b5a080572e6b8bfd.png)
+![image](https://user-images.githubusercontent.com/96565110/147815609-3d598d0d-3545-4f3d-80e4-08a208b7e8b4.png)
 
 처음 frame\_0.png ~ frame\_9.png 를 분석하고 실패 시 ,
 
@@ -599,7 +606,8 @@ frame\_1.png ~ frame\_10.png 를 분석하게 된다 …. frame\_(n).png ~ frame
 
 위의 30프레임에 대하여 판정함수를 실행하였을 때 다음과 같은 결과를 확인할 수 있다.
 
-![](RackMultipart20211231-4-1h7naab_html_9a2b266d6a0a6f46.png)
+![image](https://user-images.githubusercontent.com/96565110/147815611-fe27907b-a548-4ff1-8150-01f7e576021f.png)
+
 
 frameProbN, frameProb, predRF 를 받아
 
@@ -607,25 +615,28 @@ frameProbN, frameProb, predRF 를 받아
 
 10으로 나눈 취합한 정확도에서 가장 큰 값을 찾아 받은 10프레임이 어떠한 클래스인지 찾게 된다. 그 이후에는 관찰을 통해 만든 알고리즘을 통해 클래스를 판단하여 return 1 ~ 4를 하게 된다.
 
-![](RackMultipart20211231-4-1h7naab_html_222907dc8f40c406.png)
+![image](https://user-images.githubusercontent.com/96565110/147815616-0855edc7-ad64-4a8e-8a0b-ff95403a3cd0.png)
 
 Class 4 의 경우 Finger(C++) 프로그램에서 gesture 모드를 들어가는 동작이
 
-![](RackMultipart20211231-4-1h7naab_html_509ea7c94700dc3d.jpg)
+![image](https://user-images.githubusercontent.com/96565110/147815620-00f73f5b-9150-4b6c-8af6-bec49627116f.png)
 
 위 그림처럼 손바닥을 보여주는 모양이여서 Idle 클래스를 추가를 안했을 당시에 Gesture 모드 들어간 후 손바닥 모양을 다른 클래스로 오판단 하는 경우가 많았으며, 이 때문에 4번 Idle 클래스를 추가하여 &#39; 30 프레임 예시 파일&#39; 에서 4가 연속된 만큼 순차적으로 frame\_0.png ~ frame\_15.png 까지 뛰어넘어 frame\_16.png 부터 분석하게 된다.
 
-![](RackMultipart20211231-4-1h7naab_html_87e5b16a0287c8c6.png)
+![image](https://user-images.githubusercontent.com/96565110/147815624-f7b30b4b-00aa-4005-9ec3-e724f37c4e5d.png)
+
 
 이 외의경우 간단하게 설명하면 마지막 분석 프레임이 frame\_10.png 일 시 순서대로 분석한 것이 [1,4,4…..] 일 경우 첫번째가 1이므로 한칸 이동하여 frame\_2 ~ frame\_11 까지 분석한다 이 후 첫번째가 4가 아니므로 동일하게 한칸 이동, 마지막 프레임 frame\_12 일때 4가 처음부터 연속으로 나왔으므로 쭉 frame 들을 건너뛰며 다음 frame 을 분석하게 된다.
 
 Class 를 판단하게 되면, 판단한 결과를 소켓 통신을 통해
 
-![](RackMultipart20211231-4-1h7naab_html_7a62f9d2c5d11275.png)
+![image](https://user-images.githubusercontent.com/96565110/147815630-3645c664-8283-4b51-b9cc-9efdd859f557.png)
+
 
 결과 Class 를 Finger(C++) 로 보내게 되며, 만일 프레임 파일들을 모두 읽었을 때 예상한 결과값이 안나온다면
 
-![](RackMultipart20211231-4-1h7naab_html_dc24325f27a30d88.png)
+![image](https://user-images.githubusercontent.com/96565110/147815640-3174e15d-c79e-4d41-9a69-777e319b550d.png)
+
 
 -1 값을 보내어 Finger(C++) 프로그램에서 30프레임을 다시받아와 분석하게 된다.
 
@@ -638,11 +649,11 @@ Class 를 판단하게 되면, 판단한 결과를 소켓 통신을 통해
 
 20BN-jester (83.4GB)
 
-![](RackMultipart20211231-4-1h7naab_html_26455d9b60333bf4.png)
+![image](https://user-images.githubusercontent.com/96565110/147815650-5bdfc793-560d-41e9-8214-b735c34a9fed.png)
 
 Nvgesture(30GB)
 
-![](RackMultipart20211231-4-1h7naab_html_fac4562e903a9bae.png)
+![image](https://user-images.githubusercontent.com/96565110/147815656-e15e0009-47fc-4328-ac72-d556dcaaf6a2.png)
 
 현 프로젝트에서 작동하는 환경과 달라 해당 Dataset으로 학습한다고 했을 때 정확한 결과값이 나오지가 않았다.
 
@@ -651,20 +662,24 @@ Nvgesture(30GB)
 
 ## 4.1UI 생김새
 
-![](RackMultipart20211231-4-1h7naab_html_a58fe72f00188af2.png)
+![image](https://user-images.githubusercontent.com/96565110/147815666-f415d96c-042a-49d4-b4ba-955c67d9918a.png)
+
 
 실제 구동시에는 뒤의 바탕화면이 투명하게 보이지만 이번 보고서에서는 바탕화면과의 차이를 알 수 있게 하기 위해서 투명도를 낮췄다.
 
 ## 4.2기본 키 설명
 
-![](RackMultipart20211231-4-1h7naab_html_9bc89cd1f667dc14.png)
+![image](https://user-images.githubusercontent.com/96565110/147815673-5be85c10-9574-4757-943a-73ffbcd5cf45.png)
 
 -
 ### 1~5번 키
 
 보고서 3.1 부분의 추천 시스템을 이용. 판에 그린 글자를 Deep Learning을 통해 얻은 가장 가까운 결과값 1~5까지를 각각의 버튼에 저장한다.
 
-![](RackMultipart20211231-4-1h7naab_html_81b52e65bc7f46f1.jpg) ![](RackMultipart20211231-4-1h7naab_html_98f9d8020bcd5fde.jpg) ![](RackMultipart20211231-4-1h7naab_html_c75e039a859798e4.jpg)
+![image](https://user-images.githubusercontent.com/96565110/147815684-ac8a9a07-ed21-4e74-90e3-13b3aa472b97.png)
+![image](https://user-images.githubusercontent.com/96565110/147815685-d2db3f3e-1369-4876-88d5-dbd2beefd132.png)
+![image](https://user-images.githubusercontent.com/96565110/147815688-2208e4a7-8b94-4555-9fdb-ed83502eb660.png)
+
 
 알파벳 A를 쓰는 과정동안 계속해서 1~5번의 키 값이 바뀌는 것을 확인 할 수 가 있다.
 
@@ -695,11 +710,15 @@ Caps Lock의 기능을 하는 키. 한 번 누를 시 대문자가 소문자로 
 
 ## 4.3글자 쓰기 모드
 
-![](RackMultipart20211231-4-1h7naab_html_dfc32739674814ea.jpg) ![](RackMultipart20211231-4-1h7naab_html_a6008c38eb39228c.jpg)
+![image](https://user-images.githubusercontent.com/96565110/147815694-6559ae25-2936-4347-89ce-4a5dcf5fb78b.png)
+![image](https://user-images.githubusercontent.com/96565110/147815696-42e2269d-48e4-42f2-bd6d-adf88f617e76.png)
 
-![](RackMultipart20211231-4-1h7naab_html_915fb141afa39a87.jpg) ![](RackMultipart20211231-4-1h7naab_html_bf0e05f1fe5b08cc.jpg)
+![image](https://user-images.githubusercontent.com/96565110/147815704-88dec845-39d4-4a9a-add4-c3abf5608fdd.png)
+![image](https://user-images.githubusercontent.com/96565110/147815710-a4480614-c423-4103-8983-b3f1bf4bf556.png)
 
-![](RackMultipart20211231-4-1h7naab_html_130c7f2a76a971b.jpg) ![](RackMultipart20211231-4-1h7naab_html_10807463289ee0ca.jpg)
+![image](https://user-images.githubusercontent.com/96565110/147815718-2701c028-e658-4f79-b948-0a0d4fe6cf76.png)
+![image](https://user-images.githubusercontent.com/96565110/147815720-2ce5e1b6-fc5b-4ca7-a924-6d18dc4720cc.png)
+
 
 실제로 손 글씨를 그린 뒤 위의 1~5번 키를 통해 값을 입력하면 옆의 있는 화면에 그에 맞는 글자가 투영된다.
 
@@ -712,17 +731,18 @@ Caps Lock의 기능을 하는 키. 한 번 누를 시 대문자가 소문자로 
 -
 ### Location 클래스
 
-![](RackMultipart20211231-4-1h7naab_html_d7be4aabf38f3a36.png)
+![image](https://user-images.githubusercontent.com/96565110/147815734-3e5ed9f5-99ca-4ef4-8e37-bf6f0d533408.png)
 
 -
 ### Drawing Pad 클래스
 
-![](RackMultipart20211231-4-1h7naab_html_e23f381504d7f625.png)
+![image](https://user-images.githubusercontent.com/96565110/147815744-edd5ac92-7172-4d89-9008-7047804b60a4.png)
 
 -
 ### BackGround 클래스
 
-![](RackMultipart20211231-4-1h7naab_html_c1931fe03e662dd0.png)
+![image](https://user-images.githubusercontent.com/96565110/147815755-bc9fe365-c5f6-4073-aa53-f23a7313bf67.png)
+
 
 1.
 # Result
