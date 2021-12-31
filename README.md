@@ -1,28 +1,12 @@
-﻿
-
-컴퓨터 공학 종합 설계
--최종 보고서-
+<h1>Smart Hand Presentation</h1>
 
 
 
-
-
-
-
-
-
-
-
-
-
-TeamSmart Hand Presentation
-
-
-
+<h2>
 목차
 1	개요	3
-1.1	Smart Hand Presentation	3
-2	Finger Module	6
+          1.1	Smart Hand Presentation	3
+          2	Finger Module	6
 2.1	Intel RealSense D435	6
 2.2	Frame Processing	9
 2.3	Segmentation	10
@@ -43,7 +27,7 @@ TeamSmart Hand Presentation
 5.2	Accuracy	40
 5.3	Resource	40
 6	Reference	41
-
+<h2>
 1 개요
 1.1 Smart Hand Presentation
 
