@@ -66,12 +66,13 @@ Presentation을 하다가 프로젝터에 연결된 컴퓨터에 가서 조작�
 다음과 같은 요구사항들을 바탕으로 구현에 착수한다.
 <br>2 Finger Module
 <br>2.1 Intel RealSense D435
-<br>• D435
+<br>• D435<br>
 ![image](https://user-images.githubusercontent.com/96565110/147814104-babe71d7-0d10-4591-b7d9-a594f729ea65.png)
 ![image](https://user-images.githubusercontent.com/96565110/147814106-d7fe8ae2-a998-477f-9e18-98090d42bdd3.png)
 <br>
-• Frames
-![image](https://user-images.githubusercontent.com/96565110/147814111-0b280241-807b-417f-a677-cf363e086d67.png)
+
+• Frames<br>
+![image](https://user-images.githubusercontent.com/96565110/147814297-8ff83964-7ff5-4991-a269-2d751343b720.png)
 
 <br>RGB Frame 과 Depth Frame을 동시에 Streaming & Processing 가능
 <br>Depth Frame은 각 pixel에 대해 Depth Distance를 획득 할 수 있음<br>
@@ -102,8 +103,8 @@ Presentation을 하다가 프로젝터에 연결된 컴퓨터에 가서 조작�
 
 카메라 전방0.11m이내 Depth data의 손상 확인<br>
 Depth Data 유효범위 : 0.11m ~ 10m<br>
-② Optical Defects
-![image](https://user-images.githubusercontent.com/96565110/147814164-ef8e0285-a209-4e75-8b0d-a99d7e4c80ab.png)
+② Optical Defects<br>
+
 
 
 광원이 직접적으로 카메라를 비출 때 , 해당 물체에 대해 Depth data의 결손<br>
