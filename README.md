@@ -1,6 +1,14 @@
  <h1>Team Smart Hand Presentation</h1>
 
 # 목차
+
+1. 개요
+1.1 Smart Hand Presentation
+2. Finger Module
+2.1 Intel Realsense D435
+2.2 Frame Processing
+
+# 목차
 1.        개요
 1.1       Smart Hand Presentation
 2         Finger Module
@@ -775,5 +783,3 @@ Finger Module + Gesture Module + UI Module 통합실행 시 ,
 -K-curvature Finger Detect
 
 [https://www.researchgate.net/publication/323557218\_Real-Time\_Static\_and\_Dynamic\_Hand\_Gesture\_Recognition](https://www.researchgate.net/publication/323557218_Real-Time_Static_and_Dynamic_Hand_Gesture_Recognition)
-
-Page **38** / **38**
