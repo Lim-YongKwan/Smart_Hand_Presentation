@@ -1,6 +1,6 @@
 <h1>Smart Hand Presentation</h1>
 
-<h2>목차<br>
+<h2>                      목차<br><br>
           1.개요<br>
           1.1 Smart Hand Presentation<br>
           2 Finger Module<br>
@@ -39,68 +39,74 @@ Presentation을 하다가 프로젝터에 연결된 컴퓨터에 가서 조작�
 2. Laser Pointer  : 이벤트가 한정적<br>
 3. Tablet  :  크기가 큰 경우 휴대성에 제한 , 크기가 작은 경우 활동성에 제한<br>
 
-과 같은 단점은 존재하기 마련이다.
+과 같은 단점은 존재하기 마련이다.<br>
 
 이러한 단점들을 해소하기 위해 제안된 것이 바로 해당  “Smart Hand Presentation”  프로젝트이다.
-<br>이 프로젝트는 카메라를 이용하여 사용자로 하여금 아무런 준비물 없이도 손만으로 편리하게 Presentation을 진행할 수 있도록 한다.
+<br>이 프로젝트는 카메라를 이용하여 사용자로 하여금 아무런 준비물 없이도 손만으로 편리하게 Presentation을 진행할 수 있도록 한다.<br>
 
 이 프로젝트를 수행함으로써 Presentation의 기존 보조 수단들의 장점들은 살리면서
 <br>단점들은 해소하는 결과를 얻을 수 있을 것이다.
 
 
 
-이를 구현하기 위해 해당 프로젝트가 완성되었다고 가정하고 역으로 구현이 필요한 요소들을 명세한다.
-크게 3가지 Module이 필요하다.
-1. Finger Module
-A. 손으로 Presentation을 하기 위해선 강인한 손 인식이 필요
-B. 강인한 손 인식을 위해선 Frame에서 손을 추출해내는 기술이 필요
-C. 안정적으로 손 검출을 위해선 깔끔한Frame이 필요 ( Frame Processing )
-2. Gesture Module
-A. Presentation을 조작하기 위해서는 Gesture 인식이 필요
-B. Dynamic Gesture 인식을 위해서는 Deep Learning이 필요
-3. UI Module
-A. 사용자가 글씨를 쓰기 위해서는 PPT를 덮는 투명한 UI가 필요
-B. 손 글씨는 부정확할 수 있으므로 글자 보정이 필요
-C. 손 글씨를 인식하는 Deep Learning이 필요
-
+이를 구현하기 위해 해당 프로젝트가 완성되었다고 가정하고 역으로 구현이 필요한 요소들을 명세한다.<br>
+크게 3가지 Module이 필요하다.<br>
+1. Finger Module<br>
+<br>A. 손으로 Presentation을 하기 위해선 강인한 손 인식이 필요
+<br>B. 강인한 손 인식을 위해선 Frame에서 손을 추출해내는 기술이 필요
+<br>C. 안정적으로 손 검출을 위해선 깔끔한Frame이 필요 ( Frame Processing )
+<br>2. Gesture Module
+<br>A. Presentation을 조작하기 위해서는 Gesture 인식이 필요
+<br>B. Dynamic Gesture 인식을 위해서는 Deep Learning이 필요
+<br>3. UI Module
+<br>A. 사용자가 글씨를 쓰기 위해서는 PPT를 덮는 투명한 UI가 필요
+<br>B. 손 글씨는 부정확할 수 있으므로 글자 보정이 필요
+<br>C. 손 글씨를 인식하는 Deep Learning이 필요
+<br><br>
 다음과 같은 요구사항들을 바탕으로 구현에 착수한다.
-2 Finger Module
-2.1 Intel RealSense D435
-• D435
-          
+<br>2 Finger Module
+<br>2.1 Intel RealSense D435
+<br>• D435
+![image](https://user-images.githubusercontent.com/96565110/147814104-babe71d7-0d10-4591-b7d9-a594f729ea65.png)
+![image](https://user-images.githubusercontent.com/96565110/147814106-d7fe8ae2-a998-477f-9e18-98090d42bdd3.png)
+
 • Frames
+![image](https://user-images.githubusercontent.com/96565110/147814111-0b280241-807b-417f-a677-cf363e086d67.png)
 
-RGB Frame 과 Depth Frame을 동시에 Streaming & Processing 가능
-Depth Frame은 각 pixel에 대해 Depth Distance를 획득 할 수 있음
-• Advantages of Depth Camera
-해당 프로젝트의 핵심은 바로 이 Depth Camera이다.
+<br>RGB Frame 과 Depth Frame을 동시에 Streaming & Processing 가능
+<br>Depth Frame은 각 pixel에 대해 Depth Distance를 획득 할 수 있음
+<br>• Advantages of Depth Camera
+<br>해당 프로젝트의 핵심은 바로 이 Depth Camera이다.<br>
 기존의  RGB  Camera 에서의  Vision  인식에는 치명적인  단점이 존재하고 ,
-이  단점을 Depth Camera가  해결 해 줄 수 있기 때문이다.
-RGB Camera의 단점은 다음과 같다.
+<br>이  단점을 Depth Camera가  해결 해 줄 수 있기 때문이다.
+<br>RGB Camera의 단점은 다음과 같다.<br>
 첫째로는 조명에 매우 민감하다는 것 , 
-둘째로는 사람의 피부색에 따라서 일정한 인식을 수행하지 못하는 것이다.
-
-
-
-
-
+<br>둘째로는 사람의 피부색에 따라서 일정한 인식을 수행하지 못하는 것이다.
+![image](https://user-images.githubusercontent.com/96565110/147814113-cff9c9e1-3394-4af3-ae6d-1d3dab329860.png)
+![image](https://user-images.githubusercontent.com/96565110/147814116-4f7a9ac2-8278-4ef9-9809-8331be153ff1.png)
 
 ( 이를 보여주는 단적인 예시 ,  조명이 없어지자 마자 다른 객체를 탐지함을 확인할 수 있다. )
 
-
-반면 Depth Camera에서 얻을 수 있는 Depth Frame은 오로지 Distance data로만 사물을 판별하기 때문에
+![image](https://user-images.githubusercontent.com/96565110/147814132-f9dd3e22-dbea-47a8-a975-9628fa4096f3.png)
+<br>
+반면 Depth Camera에서 얻을 수 있는 Depth Frame은 오로지 Distance data로만 사물을 판별하기 때문에<br>
 이러한 단점들을 Depth camera는 간단히 보완해줄 수 있다
+
+<br>
 • H/W Limitations
 프로젝트를 진행하는데 있어 제한사항이 존재하는지 사전에 체크.
-테스트 결과 , H/W적 한계가 존재함을 확인.
+<br>테스트 결과 , H/W적 한계가 존재함을 확인.
+<br>
 ① Depth Distance
+![image](https://user-images.githubusercontent.com/96565110/147814154-304e10bb-b8a3-4d5c-8a56-b4ce3450c104.png)
 
-카메라 전방0.11m이내 Depth data의 손상 확인
-Depth Data 유효범위 : 0.11m ~ 10m
+카메라 전방0.11m이내 Depth data의 손상 확인<br>
+Depth Data 유효범위 : 0.11m ~ 10m<br>
 ② Optical Defects
+![image](https://user-images.githubusercontent.com/96565110/147814164-ef8e0285-a209-4e75-8b0d-a99d7e4c80ab.png)
 
 
-광원이 직접적으로 카메라를 비출 때 , 해당 물체에 대해 Depth data의 결손
+광원이 직접적으로 카메라를 비출 때 , 해당 물체에 대해 Depth data의 결손<br>
 
 
 • Intel RealSense SDK 2.0
