@@ -1,15 +1,12 @@
 <h1>Smart Hand Presentation</h1>
 
-
-
-<h2>
-목차
-1	개요	3
+<h2>목차
+          1	개요	3
           1.1	Smart Hand Presentation	3
           2	Finger Module	6
-2.1	Intel RealSense D435	6
-2.2	Frame Processing	9
-2.3	Segmentation	10
+          2.1	Intel RealSense D435	6
+          2.2	Frame Processing	9
+          2.3	Segmentation	10
 2.4	Finger Detection Algorithm	13
 2.5	Mouse Sync	15
 2.6	Finger Module Sequence	17
@@ -27,7 +24,7 @@
 5.2	Accuracy	40
 5.3	Resource	40
 6	Reference	41
-<h2>
+</h2>
 1 개요
 1.1 Smart Hand Presentation
 
