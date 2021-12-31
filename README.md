@@ -7,15 +7,10 @@
 1.1 Smart Hand Presentation
 2. Finger Module
 <br>2.1 Intel Realsense D435
-<br>2.2 Frame Processing
-<br>2.3 Segmentation
-<br>2.4 Finger Detection Algorithm
-<br> 2.5 Mouse Sync
-<br> 2.6 Finger Moudle Sequence
+<br>2.2 Segmentation
 3. HandWriting & Gesture Recognition
 <br> 3.1 HandWriting Recognition
 <br>3.2        Gesture Recognition
-<br>3.3       Gesture Recognition’s Difficulty
 4. UI(User Interface)
 <br>4.1       UI 생김새
 <br>4.2        기본 키 설명
@@ -75,7 +70,7 @@ Presentation을 하다가 프로젝터에 연결된 컴퓨터에 가서 조작�
 
 다음과 같은 요구사항들을 바탕으로 구현에 착수한다.
 
-<h2>2Finger Module
+<h2>2. Finger Module
 <br>
 2.1 Intel RealSense D435</h2>
 
@@ -152,7 +147,7 @@ RGB Camera의 단점은 다음과 같다.
 
 
 
-## 3.1Handwriting Recognition
+## 3.1 Handwriting Recognition
 
 -
 ### EMNIST DataSet
@@ -184,7 +179,7 @@ EMNIST 라는 외부의 데이터셋을 사용하였다.
 
 총 27 개의 인덱스, 0번째이후 1 ~ 26 까지가 각각 A~Z 이며 값이 가장 큰 것 일수록 해당 글자일 확률이 높다. 오차를 줄이기위해 정확도순 0~4 순위까지 출력하여 사용자가 선택할 수 있도록 하였다.( 4. UI 부분 참조)
 
-## 3.2Gesture Recognition
+## 3.2 Gesture Recognition
 
 -
 ### Gesture Dataset
