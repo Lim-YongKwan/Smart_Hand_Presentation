@@ -1,26 +1,31 @@
 <h1>Smart Hand Presentation</h1>
 
 <h2>목차
-          1	개요	3
-          1.1	Smart Hand Presentation	3
-          2	Finger Module	6
-          2.1	Intel RealSense D435	6
-          2.2	Frame Processing	9
-          2.3	Segmentation	10
-2.4	Finger Detection Algorithm	13
-2.5	Mouse Sync	15
-2.6	Finger Module Sequence	17
-3	Handwriting & Gesture Recognition	18
-3.1	Handwriting Recognition	18
-3.2	Gesture Recognition	22
-3.3	Gesture Recognition’s Difficulty	33
-4	UI (User Interface)	34
-4.1	UI 생김새	34
-4.2	기본 키 설명	35
-4.3	글자 쓰기 모드	37
-4.4	Sudo 코드	38
-5	Result	40
-5.1	Delay	40
+          1.개요
+          1.1 Smart Hand Presentation
+          2 Finger Module
+          2.1 Intel Realsense D435
+          
+          1. 개요
+          1.1 Smart Hand Presentation
+          2	Finger Module
+          2.1	Intel RealSense D435
+          2.2	Frame Processing
+          2.3	Segmentation
+2.4	Finger Detection Algorithm
+2.5	Mouse Sync
+2.6	Finger Module Sequence
+3	Handwriting & Gesture Recognition
+3.1	Handwriting Recognition
+3.2	Gesture Recognition
+3.3	Gesture Recognition’s Difficulty
+4	UI (User Interface)
+4.1	UI 생김새
+4.2	기본 키 설명
+4.3	글자 쓰기 모드
+4.4	Sudo 코드
+5	Result
+5.1	Delay
 5.2	Accuracy	40
 5.3	Resource	40
 6	Reference	41
