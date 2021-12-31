@@ -78,12 +78,14 @@ Presentation을 하다가 프로젝터에 연결된 컴퓨터에 가서 조작�
 
 2.1 Intel RealSense D435</h2>
 
-D435
+
+### D435
+
 ![image](https://user-images.githubusercontent.com/96565110/147814981-b55cd574-12b9-4d29-ad43-36c34376813b.png)
 ![image](https://user-images.githubusercontent.com/96565110/147814987-795d4539-b643-4cee-8e31-01976ddbe5df.png)
 
 
-Frames
+### Frames
 
 ![image](https://user-images.githubusercontent.com/96565110/147814997-459c2e17-33c9-4ef7-80df-42e5615cafc5.png)
 
@@ -94,7 +96,7 @@ Depth Frame은 각 pixel에 대해 Depth Distance를 획득 할 수 있음
 
 
 
-Advantages of Depth Camera
+### Advantages of Depth Camera
 
 해당 프로젝트의 핵심은 바로 이 Depth Camera이다.
 
@@ -130,23 +132,26 @@ RGB Camera의 단점은 다음과 같다.
 1.
 #### Depth Distance
 
-![](RackMultipart20211231-4-1h7naab_html_6b9be3529582b6e8.jpg)
+![image](https://user-images.githubusercontent.com/96565110/147815191-28c573b7-4867-41ce-9e59-897814d5fd94.png)
+
 
 카메라 전방0.11m이내 Depth data의 손상 확인
 
 Depth Data 유효범위 : 0.11m ~ 10m
 
-1.
+2.
 #### Optical Defects
 
-![](RackMultipart20211231-4-1h7naab_html_8cb7eceaecbc0f07.jpg)
+![image](https://user-images.githubusercontent.com/96565110/147815203-09f73287-d5eb-4ca8-a4a3-f2b7f07e63fa.png)
+
 
 광원이 직접적으로 카메라를 비출 때 , 해당 물체에 대해 Depth data의 결손
 
 -
 ### Intel RealSense SDK 2.0
 
-![](RackMultipart20211231-4-1h7naab_html_e05c7c3e486bd617.jpg)
+![image](https://user-images.githubusercontent.com/96565110/147815215-35497218-364d-46a5-b4d2-7d2db84adf71.png)
+
 
 - D435의 Frame을 처리하기 위해 필수적으로 요구되는 Kit
 
@@ -162,12 +167,15 @@ Depth Data 유효범위 : 0.11m ~ 10m
 
 그 외에는OpenCV를 활용하여 구현하였다.
 
+
 ## 2.2Frame Processing
 
 -
 ### Intel SDK Post Processing
 
-![](RackMultipart20211231-4-1h7naab_html_beba48b335385492.jpg) ![Shape1](RackMultipart20211231-4-1h7naab_html_b82da267855a0109.gif) ![](RackMultipart20211231-4-1h7naab_html_5d2461ac6ba8b4d4.jpg)
+![image](https://user-images.githubusercontent.com/96565110/147815236-aacc2910-1cf8-4926-a503-df9cac71460e.png)
+![image](https://user-images.githubusercontent.com/96565110/147815240-ca5df0f2-bebc-40ff-a78a-de60654f346d.png)
+
 
 Depth Frame의 Noise를 개선하기 위해 SDK를 활용하여 후처리 기법 적용
 
@@ -179,7 +187,9 @@ Depth Frame의 Noise를 개선하기 위해 SDK를 활용하여 후처리 기법
 -
 ### Preset , Align
 
-![](RackMultipart20211231-4-1h7naab_html_1918da5bf554a8ed.jpg) ![Shape2](RackMultipart20211231-4-1h7naab_html_b82da267855a0109.gif) ![](RackMultipart20211231-4-1h7naab_html_e8b9e4d990f51363.jpg)
+![image](https://user-images.githubusercontent.com/96565110/147815241-5b26cfe8-4a5a-4743-9a87-77263d7346d7.png)
+![image](https://user-images.githubusercontent.com/96565110/147815245-96b534b2-514c-4459-b50b-1d8c724a84c0.png)
+
 
 사전에 정의해둔 Camera Preset을 사용.
 
@@ -210,10 +220,12 @@ Gaussian Mixture-based Segmentation Algorithm ( BackgroundSubMOG2 in OpenCV )
 
 현재 프레임과 객체를 추출하기 위한 배경 모델의 차영상을 구하고 Threshold 처리하여 전경을 추출해낸다.
 
-![](RackMultipart20211231-4-1h7naab_html_a4297b3e61f9ee5d.jpg)
+![image](https://user-images.githubusercontent.com/96565110/147815263-1f0f4044-63da-4602-9def-a57afae17b21.png)
+
 
 -
 ### Morphological Operation
+
 
 다만 이러한 분할 알고리즘을 사용하는 경우에 위 그림과 같이 많은 Noise가 생기게 되는데
 
@@ -228,9 +240,9 @@ Gaussian Mixture-based Segmentation Algorithm ( BackgroundSubMOG2 in OpenCV )
 
 이 두 연산을 차례로 수행하는 Opening기법을 사용하여 Noise를 개선하였다.
 
-![](RackMultipart20211231-4-1h7naab_html_78ebd4e39f0972c3.jpg)
+![image](https://user-images.githubusercontent.com/96565110/147815271-1160f865-43a7-4bb4-892d-831ce3c276fb.png)
 
--
+
 ### Depth data
 
 해당 프로젝트는 유저의 손은 Camera에 가장 밀접한 움직이는 객체다 라는 전제조건이 존재한다.
@@ -243,7 +255,7 @@ Gaussian Mixture-based Segmentation Algorithm ( BackgroundSubMOG2 in OpenCV )
 
 ( 다수의 실험 결과 , 8 cm 로 설정하는 것이 가장 안정적임을 확인. )
 
-![](RackMultipart20211231-4-1h7naab_html_7af93ea845ca74c3.jpg)
+![image](https://user-images.githubusercontent.com/96565110/147815277-654627b5-f350-466a-99c2-29739c2ef691.png)
 
 -
 ### OpenCV Processing
@@ -254,7 +266,9 @@ Frame을 2.2 에서 Processing 하였음에도 Noise가 존재함을 확인하�
 
 Median filter &amp; Interpolation 기법을 적용하여 비교적 깔끔한 depth 영상을 획득하는데 성공했다.
 
-![](RackMultipart20211231-4-1h7naab_html_ff53fdadca1e8f9c.png) ![Shape3](RackMultipart20211231-4-1h7naab_html_b82da267855a0109.gif) ![](RackMultipart20211231-4-1h7naab_html_47a2db6330f36cfa.png)
+![image](https://user-images.githubusercontent.com/96565110/147815283-d9013e6e-9467-4fe3-b134-cdde79f0aca5.png)
+![image](https://user-images.githubusercontent.com/96565110/147815285-d9893fbe-0eea-45f2-b0de-6b1557b6684e.png)
+
 
 ## 2.4Finger Detection Algorithm
 
@@ -265,7 +279,8 @@ Frame에서 Hand를 Segmentation한 결과를 획득하였으니
 -
 ### convexHull Algorithm
 
-![](RackMultipart20211231-4-1h7naab_html_fe7e3b5c5c6491f2.jpg)
+![image](https://user-images.githubusercontent.com/96565110/147815290-e9ee832e-174e-4d5d-bd23-3b0f07549044.png)
+
 
 get max contour : 가장 영역이 큰 윤곽선을 얻는다.
 
@@ -278,7 +293,9 @@ return valid points : 볼록 껍질 좌표들을 Finger로 판단하여 반환�
 -
 ### K-curvature Algorithm
 
-![](RackMultipart20211231-4-1h7naab_html_9cd8874a07bec16b.jpg) ![](RackMultipart20211231-4-1h7naab_html_5912326fe65696a7.jpg)
+![image](https://user-images.githubusercontent.com/96565110/147815295-6e52e8e5-5061-4ae8-a905-c70ca7960122.png)
+![image](https://user-images.githubusercontent.com/96565110/147815299-031883e1-bff6-4432-82cb-e0ffc7756361.png)
+
 
 성능이 좋은 Finger Detection Algorithm으로 알려진 K-curvature Algorithm 으로 개선
 
@@ -296,7 +313,8 @@ based distance &amp; angle , return valid points : 계산결과를 바탕으로 
 
 - 단순 convex Hull 알고리즘만으로 Detection 하는 것 보다 훨씬 강인한 Detection을 수행하는데 성공
 
-![](RackMultipart20211231-4-1h7naab_html_509ea7c94700dc3d.jpg)
+![image](https://user-images.githubusercontent.com/96565110/147815305-6de95ee0-fe8a-40b3-bb03-a78e82df5ba7.png)
+
 
 ## 2.5Mouse Sync
 
@@ -332,7 +350,8 @@ Distance Transform 알고리즘을 사용하여 거리변환 행렬을 저장한
 
 여기서 얻은 이 좌표가 바로 Hand Center이고 , 값은 Hand Center를 중심으로 한 원의 반지름 이라고 할 수 있다.
 
-![](RackMultipart20211231-4-1h7naab_html_dd03cd1484f3b3ae.jpg)
+![image](https://user-images.githubusercontent.com/96565110/147815314-12d7f1f9-e866-4c3e-88ed-490830e458db.png)
+
 
 -
 ### Smooth Mouse Move
