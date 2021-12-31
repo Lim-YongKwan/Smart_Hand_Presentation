@@ -1,54 +1,51 @@
 <h1>Smart Hand Presentation</h1>
 
-<h2>목차
-          1.개요
+<h2>목차<br>
+          1.개요<br>
           1.1 Smart Hand Presentation<br>
           2 Finger Module<br>
           2.1 Intel Realsense D435
-          <br>
-          1. 개요
-          1.1 Smart Hand Presentation
-          2	Finger Module
-          2.1	Intel RealSense D435
-          2.2	Frame Processing
-          2.3	Segmentation
-2.4	Finger Detection Algorithm
-2.5	Mouse Sync
-2.6	Finger Module Sequence
+          <br>2.2	Frame Processing
+          <br>2.3	Segmentation<br>
+2.4	Finger Detection Algorithm<br>
+2.5	Mouse Sync<br>
+2.6	Finger Module Sequence<br>
 3	Handwriting & Gesture Recognition
-3.1	Handwriting Recognition
-3.2	Gesture Recognition
-3.3	Gesture Recognition’s Difficulty
-4	UI (User Interface)
-4.1	UI 생김새
-4.2	기본 키 설명
-4.3	글자 쓰기 모드
-4.4	Sudo 코드
-5	Result
-5.1	Delay
-5.2	Accuracy	40
-5.3	Resource	40
-6	Reference	41
+<br>3.1	Handwriting Recognition
+<br>3.2	Gesture Recognition
+<br>3.3	Gesture Recognition’s Difficulty
+<br>4	UI (User Interface)
+<br>4.1	UI 생김새
+<br>4.2	기본 키 설명
+<br>4.3	글자 쓰기 모드
+<br>4.4	Sudo 코드
+<br>5	Result
+<br>5.1	Delay
+<br>5.2	Accuracy	40
+<br>5.3	Resource	40
+<br>6	Reference	41
+<br>
 </h2>
-1 개요
-1.1 Smart Hand Presentation
+1 개요<br>
+1.1 Smart Hand Presentation<br>
 
-Presentation은 다른 사람에게 자신의 생각을 전달하는 행위라고 할 수 있다.
-하지만 그런 중요한 일을 하는 와중에 흐름이 끊기는 것은 치명적이다.
+Presentation은 다른 사람에게 자신의 생각을 전달하는 행위라고 할 수 있다.<br>
+하지만 그런 중요한 일을 하는 와중에 흐름이 끊기는 것은 치명적이다.<br>
 
-Presentation을 하다가 프로젝터에 연결된 컴퓨터에 가서 조작을 하고 다시 Presentation을 하는 것을 반복하는 행위는 발표자 뿐만 아니라 청취자에게도 혼란스러움을 주기 마련이다.
+Presentation을 하다가 프로젝터에 연결된 컴퓨터에 가서 조작을 하고 다시 Presentation을 하는 것을 반복하는 행위는 발표자 뿐만 아니라 청취자에게도 혼란스러움을 주기 마련이다.<br>
 
-이러한 현상을 막기 위해 현대에는 다음과 같은 보조 수단이 존재하지만
-1. Smart Screen  :  높은 가격 , 어려운 설치
-2. Laser Pointer  : 이벤트가 한정적
-3. Tablet  :  크기가 큰 경우 휴대성에 제한 , 크기가 작은 경우 활동성에 제한
+이러한 현상을 막기 위해 현대에는 다음과 같은 보조 수단이 존재하지만<br>
+1. Smart Screen  :  높은 가격 , 어려운 설치<br>
+2. Laser Pointer  : 이벤트가 한정적<br>
+3. Tablet  :  크기가 큰 경우 휴대성에 제한 , 크기가 작은 경우 활동성에 제한<br>
+
 과 같은 단점은 존재하기 마련이다.
 
 이러한 단점들을 해소하기 위해 제안된 것이 바로 해당  “Smart Hand Presentation”  프로젝트이다.
-이 프로젝트는 카메라를 이용하여 사용자로 하여금 아무런 준비물 없이도 손만으로 편리하게 Presentation을 진행할 수 있도록 한다.
+<br>이 프로젝트는 카메라를 이용하여 사용자로 하여금 아무런 준비물 없이도 손만으로 편리하게 Presentation을 진행할 수 있도록 한다.
 
 이 프로젝트를 수행함으로써 Presentation의 기존 보조 수단들의 장점들은 살리면서
-단점들은 해소하는 결과를 얻을 수 있을 것이다.
+<br>단점들은 해소하는 결과를 얻을 수 있을 것이다.
 
 
 
