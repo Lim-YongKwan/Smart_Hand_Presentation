@@ -1,5 +1,8 @@
 <h1>Team Smart Hand Presentation</h1>
 
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/96565110/147893483-70f37c22-312b-4199-8bef-c9aed6b85180.gif)
+
+
 *Intel Realsense SDK 2.0과 Intel D435를 요구로 함.
 
 # 목차
