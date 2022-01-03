@@ -1,6 +1,6 @@
 <h1>Team Smart Hand Presentation</h1>
 
-*Intel Realsense SDK 2.0을 요구호 함.
+*Intel Realsense SDK 2.0과 Intel D435를 요구로 함.
 
 # 목차
 
